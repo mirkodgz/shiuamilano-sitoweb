@@ -22,7 +22,7 @@
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,12 +91,13 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: 1rem 0;
+        padding: 5px 0;
         /* Reduced mobile padding */
     }
 
     .header.scrolled {
-        padding: 0.8rem 0;
+        padding-bottom: 2px;
+        padding-top: 7px;
         /* Even smaller when scrolled */
     }
 
@@ -116,6 +117,8 @@
         order: 1;
         margin: 0;
         /* Remove centering */
+        z-index: 10001;
+        /* Above mobile menu */
     }
 
     /* Force Button to Order 2 (Right) */
@@ -123,7 +126,7 @@
         display: block;
         order: 2;
         color: var(--primary);
-        z-index: 2000;
+        z-index: 10001;
         /* Above menu */
     }
 
@@ -136,8 +139,10 @@
     .mobile-menu {
         position: fixed;
         inset: 0;
-        background-color: rgba(255, 255, 255, 0.98);
-        z-index: 1000;
+        background-color: #ffffff;
+        /* Solid white to prevent see-through */
+        z-index: 9999;
+        /* Ensure it stays on top */
         /* Behind button */
         display: flex;
         flex-direction: column;
@@ -167,9 +172,9 @@
         /* Requested white */
         background-color: var(--primary);
         /* Requested primary bg */
-        padding: 0.8rem 1.5rem;
-        border-radius: 4px;
-        font-weight: 600;
+        padding: 3px 20px;
+        border-radius: 2px;
+        font-weight: 500;
         text-decoration: none;
         text-transform: none;
         /* Removed uppercase */
