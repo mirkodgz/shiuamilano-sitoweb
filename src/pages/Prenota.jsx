@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import HoursInfo from '../components/HoursInfo';
+import SEO from '../components/SEO';
 import './Prenota.css';
 
 const Prenota = () => {
@@ -26,6 +27,11 @@ const Prenota = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
+                <SEO
+                    title="Prenota un Tavolo"
+                    description="Prenota il tuo tavolo da SHIUA Milano. Assicura il tuo posto per una serata indimenticabile di vino e gusto."
+                    canonical="/prenota"
+                />
                 {/* Intro Text */}
                 <div className="intro-text">
                     <p>

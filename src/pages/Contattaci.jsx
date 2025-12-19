@@ -23,6 +23,11 @@ const Contattaci = () => {
 
     return (
         <div className="contattaci-container">
+            <SEO
+                title="Contattaci"
+                description="Contatta SHIUA Milano. Siamo in Via Solari 43. Chiamaci o scrivici per prenotazioni ed eventi privati."
+                canonical="/contattaci"
+            />
             <div className="contattaci-grid">
 
                 {/* Contact Info (Left) */}
