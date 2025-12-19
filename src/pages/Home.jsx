@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowRight, Info } from 'lucide-react';
+import SEO from '../components/SEO';
 import './Home.css';
 
 import HoursInfo from '../components/HoursInfo';
@@ -16,6 +17,11 @@ const Home = () => {
 
     return (
         <div className="home-page" ref={containerRef}>
+            <SEO
+                title="Home"
+                description="SHIUA Enoteca Wine Bar a Milano. Un'esperienza unica di vini selezionati e atmosfera ispirata all'Amazzonia. Via Solari 43."
+                canonical="/"
+            />
             {/* Hero Section with Fixed Logo */}
             <section className="hero">
                 <div
