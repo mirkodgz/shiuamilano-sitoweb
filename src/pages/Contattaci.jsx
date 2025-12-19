@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 import SEO from '../components/SEO';
 import './Contattaci.css';
 
 const Contattaci = () => {
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const script = document.createElement('script');
         script.src = "https://link.msgsndr.com/js/form_embed.js";
@@ -73,10 +75,25 @@ const Contattaci = () => {
                         Compila il modulo sottostante o contattaci direttamente tramite telefono, whatsapp o email. Siamo ansiosi di sentirti e di rendere la tua esperienza indimenticabile presso SHIUA Milano Enoteca Wine Bar.
                     </p>
 
-                    <div style={{ width: '100%', minHeight: '500px' }}>
+                    <div style={{ width: '100%', minHeight: '500px', position: 'relative' }}>
+                        {loading && (
+                            <div style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '400px',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                zIndex: 1
+                            }}>
+                                <div className="spinner"></div>
+                            </div>
+                        )}
                         <iframe
                             src="https://api.leadconnectorhq.com/widget/form/rfpdWr8gxNH0GKsyIU3r"
-                            style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                            style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px', minHeight: 'auto', opacity: loading ? 0 : 1, transition: 'opacity 0.3s' }}
                             id="inline-rfpdWr8gxNH0GKsyIU3r"
                             data-layout="{'id':'INLINE'}"
                             data-trigger-type="alwaysShow"
@@ -90,6 +107,7 @@ const Contattaci = () => {
                             data-layout-iframe-id="inline-rfpdWr8gxNH0GKsyIU3r"
                             data-form-id="rfpdWr8gxNH0GKsyIU3r"
                             title="Contact Form - Sitoweb"
+                            onLoad={() => setLoading(false)}
                         >
                         </iframe>
                     </div>

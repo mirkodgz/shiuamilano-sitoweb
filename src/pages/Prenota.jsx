@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import HoursInfo from '../components/HoursInfo';
 import SEO from '../components/SEO';
 import './Prenota.css';
 
 const Prenota = () => {
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const script = document.createElement('script');
         script.src = "https://link.msgsndr.com/js/form_embed.js";
@@ -49,13 +51,29 @@ const Prenota = () => {
                 </div>
 
                 {/* Booking Widget Embed */}
-                <div style={{ width: '100%', minHeight: '600px' }}>
+                <div style={{ width: '100%', minHeight: '600px', position: 'relative' }}>
+                    {loading && (
+                        <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '400px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            zIndex: 1
+                        }}>
+                            <div className="spinner"></div>
+                        </div>
+                    )}
                     <iframe
                         src="https://api.leadconnectorhq.com/widget/booking/lI62xZDtlslqfeDy49Ov"
-                        style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px' }}
+                        style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px', opacity: loading ? 0 : 1, transition: 'opacity 0.3s' }}
                         scrolling="no"
                         id="lI62xZDtlslqfeDy49Ov_1766159476523"
                         title="Booking Widget"
+                        onLoad={() => setLoading(false)}
                     ></iframe>
                 </div>
 

@@ -9,8 +9,12 @@
 }
 
 .newsletter-section {
-    max-width: 600px;
-    margin: 0 auto 4rem;
+    width: 100%;
+    max-width: 800px;
+    /* Increased from 600px to allow more breath */
+    margin: 0 auto 3rem;
+    padding: 0;
+    /* Ensure no extra padding here */
 }
 
 .newsletter-badge {

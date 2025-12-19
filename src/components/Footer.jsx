@@ -29,7 +29,7 @@ const Footer = () => {
                     <p className="newsletter-text">
                         Unisciti alla nostra newsletter esclusiva per restare sempre aggiornato sulle ultime novità.
                     </p>
-                    <div className="newsletter-form-container" style={{ minHeight: 'auto', maxWidth: '600px', margin: '0 auto' }}>
+                    <div className="newsletter-form-container" style={{ width: '100%', minHeight: 'auto' }}>
                         <iframe
                             src="https://api.leadconnectorhq.com/widget/form/royx4ixazV1tFBTB3Z7Y"
                             style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px', minHeight: 'auto' }}
