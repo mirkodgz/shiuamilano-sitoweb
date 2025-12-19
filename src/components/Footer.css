@@ -1,0 +1,127 @@
+/* Footer Styles */
+.footer {
+    background-color: #f9fafb;
+    padding: 4rem 1rem 2rem;
+    border-top: 1px solid #e5e7eb;
+    color: #000000;
+    /* Updated to black */
+    text-align: center;
+}
+
+.newsletter-section {
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.newsletter-badge {
+    background-color: var(--primary);
+    color: white;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.newsletter-text {
+    font-size: 16px;
+    /* Updated to 16px */
+    margin-bottom: 1rem;
+    color: #000000;
+    /* Updated to black */
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-input {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    font-size: 16px;
+    /* Updated for consistency */
+}
+
+.newsletter-submit {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 16px;
+    /* Updated for consistency */
+    font-weight: 500;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.newsletter-submit:hover {
+    background-color: #003d29;
+}
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: 16px;
+    /* Updated to 16px */
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-icon {
+    color: var(--primary);
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #000000;
+    /* Explicitly black */
+    font-weight: 400;
+    text-decoration: none;
+    /* Ensure no underline by default */
+}
+
+.contact-item:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 2rem;
+    font-size: 16px;
+    /* Updated to 16px */
+    color: #000000;
+    /* Updated to black */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    color: #000000;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

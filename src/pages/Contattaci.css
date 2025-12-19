@@ -1,0 +1,102 @@
+/* Contattaci Styles */
+.contattaci-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 180px 20px 100px;
+    /* Increased padding top and bottom */
+}
+
+.contattaci-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+}
+
+.info-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.info-group {
+    margin-bottom: 2rem;
+}
+
+.info-text {
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form-section {
+    background-color: white;
+}
+
+.form-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.form-desc {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-submit {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form-submit:hover {
+    background-color: #003d29;
+}
+
+@media (max-width: 768px) {
+    .contattaci-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,68 @@
+/* Chi Siamo Styles */
+.chi-siamo-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 180px 20px 100px;
+    /* Increased padding top and bottom */
+}
+
+.chi-siamo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.chi-siamo-title-badge {
+    background-color: var(--primary);
+    color: white;
+    display: inline-block;
+    padding: 6px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+    /* Subtle depth */
+}
+
+.chi-siamo-text {
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.chi-siamo-img-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.chi-siamo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.chi-siamo-img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .chi-siamo-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .chi-siamo-img-container {
+        order: -1;
+        /* Image first on mobile? or keep text first */
+    }
+}

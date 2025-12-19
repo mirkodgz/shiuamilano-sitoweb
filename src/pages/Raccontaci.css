@@ -1,0 +1,30 @@
+.raccontaci-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 180px 20px 80px;
+    text-align: center;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+.raccontaci-title {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.raccontaci-text {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feedback-form-wrapper {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}

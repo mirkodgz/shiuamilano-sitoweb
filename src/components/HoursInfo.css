@@ -1,0 +1,76 @@
+/* HoursInfo Component Styles */
+.hours-info-container {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+.section-badge {
+    background-color: var(--primary);
+    color: white;
+    display: inline-block;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.hours-row {
+    display: flex;
+    align-items: flex-end;
+    /* Align to bottom so line looks right */
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.day-name {
+    font-weight: 500;
+    color: var(--text-dark);
+    flex-shrink: 0;
+    padding-right: 10px;
+}
+
+.separator-line {
+    flex-grow: 1;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+    /* Adjust to align with text baseline */
+}
+
+.time-range {
+    padding-left: 10px;
+    font-weight: 500;
+    color: var(--text-dark);
+    flex-shrink: 0;
+}
+
+.important-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.phone-link:hover {
+    opacity: 0.8;
+}

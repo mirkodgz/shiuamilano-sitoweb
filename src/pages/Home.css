@@ -1,0 +1,153 @@
+/* Home Styles */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    /* Taller for parallax */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/Foto-Section-Prenota-Homepage.jpg');
+    /* Using available image as placeholder */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Slight darkening if needed */
+    z-index: 0;
+}
+
+.hero-content {
+    /* This container might not be strictly necessary with fixed image, 
+     but we keep it for structure. */
+    width: 100%;
+    height: 100%;
+}
+
+.hero-logo-large {
+    position: fixed;
+    /* Requested "te segue" behavior */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    /* Requested width */
+    z-index: -1;
+    /* Requested z-index */
+    height: auto;
+    display: block;
+}
+
+/* Ensure the NEXT section covers the fixed image */
+.prenota-section {
+    position: relative;
+    z-index: 30;
+    /* Higher than hero container to cover the fixed image */
+    padding: 6rem 1rem;
+    text-align: center;
+    background-color: white;
+    /* Important: needs background to cover the logo */
+}
+
+/* Mobile check */
+@media (max-width: 768px) {
+    .hero-logo-large {
+        width: 80%;
+        /* Adjust for mobile */
+    }
+}
+
+
+.prenota-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.prenota-text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #4b5563;
+}
+
+.prenota-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.prenota-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.prenota-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prenota-btn-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.prenota-btn {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prenota-btn:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Info Box */
+.info-box {
+    background-color: #1a4d2e;
+    /* Darker green */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.info-icon {
+    background-color: #3b82f6;
+    /* Blue info icon color */
+    border-radius: 4px;
+    padding: 2px;
+    color: white;
+}
