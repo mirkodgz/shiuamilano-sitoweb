@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Info } from 'lucide-react';
 import SEO from '../components/SEO';
 import './Home.css';
@@ -56,9 +57,9 @@ const Home = () => {
                             <div className="prenota-header">Prenota un tavolo</div>
                             <img src="/assets/Foto-Section-Prenota-Homepage.jpg" alt="Wine pouring" className="prenota-img" />
                             <div className="prenota-btn-container">
-                                <a href="/prenota" className="prenota-btn">
+                                <Link to="/prenota" className="prenota-btn">
                                     Prenota <ArrowRight size={16} />
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
