@@ -92,7 +92,8 @@
 @media (max-width: 768px) {
     .header {
         padding: 5px 0;
-        /* Reduced mobile padding */
+        z-index: 10000;
+        /* Ensure header stays on top of mobile menu */
     }
 
     .header.scrolled {
@@ -139,12 +140,13 @@
     .mobile-menu {
         position: fixed;
         inset: 0;
-        background-color: #ffffff;
+        background-color: #ffffff !important;
         /* Solid white to prevent see-through */
-        z-index: 9999;
-        /* Ensure it stays on top */
+        z-index: 9990;
+        /* Below header but above content */
         /* Behind button */
         display: flex;
+        /* ... */
         flex-direction: column;
         align-items: flex-start;
         /* Align left */
